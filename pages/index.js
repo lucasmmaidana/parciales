@@ -6,9 +6,11 @@ import { useAuth } from "../lib/auth"
 export default function Home() {
   const auth = useAuth()
 
-  return auth.user ? (
+  return auth.loading ? (
+    "Loading..."
+  ) : auth.user ? (
     <div>
-      <p>Email: {auth.user.email}</p>
+      <p>{JSON.stringify(auth.user, null, 2)}</p>
       <button onClick={(e) => auth.signout()}>Sign Out</button>
     </div>
   ) : (
