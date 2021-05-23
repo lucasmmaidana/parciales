@@ -56,6 +56,7 @@ const ComisionPage = ({ initialParciales }) => {
     setAllParciales((currentParciales) => [newParcial, ...currentParciales])
     createParcial(newParcial)
   }
+
   return (
     <Box
       display="flex"
