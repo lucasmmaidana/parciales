@@ -1,7 +1,8 @@
 import Head from "next/head"
-import styles from "../styles/Home.module.css"
 
 import { useAuth } from "../lib/auth"
+
+import { Button, ButtonGroup } from "@chakra-ui/react"
 
 export default function Home() {
   const auth = useAuth()
@@ -11,9 +12,9 @@ export default function Home() {
   ) : auth.user ? (
     <div>
       <p>{JSON.stringify(auth.user, null, 2)}</p>
-      <button onClick={(e) => auth.signout()}>Sign Out</button>
+      <Button onClick={(e) => auth.signout()}>Sign Out</Button>
     </div>
   ) : (
-    <button onClick={(e) => auth.signinWithGoogle()}>Sign In</button>
+    <Button onClick={(e) => auth.signinWithGoogle()}>Sign In</Button>
   )
 }
