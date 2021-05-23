@@ -1,6 +1,6 @@
 import Head from "next/head"
 
-import { useAuth } from "../lib/auth"
+import { useAuth } from "@/lib/auth"
 
 import { Button, ButtonGroup } from "@chakra-ui/react"
 

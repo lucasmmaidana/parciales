@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react"
 import { useRouter } from "next/router"
-import { getAllComisiones, getAllParciales } from "../../lib/db-admin"
+import { getAllComisiones, getAllParciales } from "@/lib/db-admin"
 
 export async function getStaticProps(context) {
   const comisionId = context.params.comisionId
