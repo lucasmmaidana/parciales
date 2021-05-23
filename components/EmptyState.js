@@ -1,5 +1,6 @@
 import React from "react"
 import { Box, Heading, Stack, Text, Button } from "@chakra-ui/react"
+import AddComisionModal from "./AddComisionModal"
 
 const EmptyState = () => {
   return (
@@ -22,26 +23,14 @@ const EmptyState = () => {
         justifyContent="center"
         alignItems="center"
         spacing={2}
-        p={16}
+        p={24}
         borderRadius={8}
       >
         <Heading mb={6} size="lg">
           Todavía no agregaste una comisión.
         </Heading>
 
-        <Button
-          maxWidth="200px"
-          backgroundColor="gray.900"
-          color="white"
-          fontWeight="medium"
-          _hover={{ bg: "gray.700" }}
-          _active={{
-            bg: "gray.800",
-            transform: "scale(0.95)",
-          }}
-        >
-          Nueva comisión
-        </Button>
+        <AddComisionModal>Nueva comisión</AddComisionModal>
       </Stack>
     </Box>
   )

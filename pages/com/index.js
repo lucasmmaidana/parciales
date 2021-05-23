@@ -27,7 +27,7 @@ const Dashboard = () => {
     <DashboardShell>
       <ComisionTableHeader />
       {comisiones.length ? (
-        <ComisionTable sites={comisiones} />
+        <ComisionTable comisiones={comisiones} />
       ) : (
         <EmptyState />
       )}

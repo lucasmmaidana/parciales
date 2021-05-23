@@ -6,8 +6,8 @@ import {
   Heading,
   Flex,
   Box,
-  Button,
 } from "@chakra-ui/react"
+import AddComisionModal from "./AddComisionModal"
 
 const SiteTableHeader = (props) => (
   <Box mx={4}>
@@ -18,18 +18,7 @@ const SiteTableHeader = (props) => (
     </Breadcrumb>
     <Flex justifyContent="space-between">
       <Heading mb={8}>Mis comisiones</Heading>
-      <Button
-        backgroundColor="gray.900"
-        color="white"
-        fontWeight="medium"
-        _hover={{ bg: "gray.700" }}
-        _active={{
-          bg: "gray.800",
-          transform: "scale(0.95)",
-        }}
-      >
-        + Nueva comisión
-      </Button>
+      <AddComisionModal>Nueva comisión</AddComisionModal>
     </Flex>
   </Box>
 )

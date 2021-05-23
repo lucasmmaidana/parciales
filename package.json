@@ -11,6 +11,7 @@
     "@chakra-ui/react": "^1.6.2",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@heroicons/react": "^1.0.1",
     "date-fns": "^2.21.3",
     "firebase": "7.17.1",
     "firebase-admin": "^9.8.0",
@@ -19,6 +20,7 @@
     "next": "10.x",
     "react": "17.x",
     "react-dom": "17.x",
+    "react-hook-form": "^7.6.5",
     "swr": "^0.5.6"
   }
 }
