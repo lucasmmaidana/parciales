@@ -6,9 +6,14 @@ import ComisionTable from "@/components/ComisionTable"
 import ComisionTableSkeleton from "@/components/ComisionTableSkeleton"
 import ComisionTableHeader from "@/components/ComisionTableHeader"
 import fetcher from "@/utils/fetcher"
+import { useAuth } from "@/lib/auth"
 
 const Dashboard = () => {
-  const { data } = useSWR("/api/comisiones", fetcher)
+  const { user } = useAuth()
+  const { data } = useSWR(
+    user ? ["/api/comisiones", user.token] : null,
+    fetcher
+  )
   const comisiones = data?.comisiones
   if (!data) {
     return (
@@ -18,7 +23,6 @@ const Dashboard = () => {
       </DashboardShell>
     )
   }
-
   return (
     <DashboardShell>
       <ComisionTableHeader />
