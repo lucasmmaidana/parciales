@@ -25,21 +25,22 @@ const EmptyState = () => {
         p={16}
         borderRadius={8}
       >
-        <Heading size="lg">Todavía no agregaste una comisión.</Heading>
-        <Text>Te damos la bienvenida 📚</Text>
+        <Heading mb={6} size="lg">
+          Todavía no agregaste una comisión.
+        </Heading>
+
         <Button
           maxWidth="200px"
           backgroundColor="gray.900"
           color="white"
           fontWeight="medium"
-          mt={4}
           _hover={{ bg: "gray.700" }}
           _active={{
             bg: "gray.800",
             transform: "scale(0.95)",
           }}
         >
-          Agregar una comisión
+          Nueva comisión
         </Button>
       </Stack>
     </Box>

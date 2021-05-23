@@ -38,26 +38,6 @@ const DashboardShell = ({ children }) => {
         </Flex>
       </Flex>
       <Flex margin="0 auto" direction="column" maxW="1250px" px={8}>
-        <Breadcrumb>
-          <BreadcrumbItem>
-            <BreadcrumbLink>Comisiones</BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
-        <Flex justifyContent="space-between">
-          <Heading mb={8}>Mis comisiones</Heading>
-          <Button
-            backgroundColor="gray.900"
-            color="white"
-            fontWeight="medium"
-            _hover={{ bg: "gray.700" }}
-            _active={{
-              bg: "gray.800",
-              transform: "scale(0.95)",
-            }}
-          >
-            + Nueva comisión
-          </Button>
-        </Flex>
         {children}
       </Flex>
     </Box>
